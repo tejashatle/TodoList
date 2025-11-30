@@ -16,4 +16,6 @@ public interface TodoDAO {
 	
 	public Todo updateTodo(long todoId, Todo todo);
 	
+	public long deleteTodo(long todoId);
+	
 }

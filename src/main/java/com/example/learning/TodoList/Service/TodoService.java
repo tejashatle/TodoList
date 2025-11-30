@@ -13,4 +13,5 @@ public interface TodoService {
 	public Todo saveTodo(Todo todo);
 	public Todo getTodo(long todoId);
 	public Todo updateTodo(long todoId, Todo todo);
+	public long deleteTodo(long todoId);
 }

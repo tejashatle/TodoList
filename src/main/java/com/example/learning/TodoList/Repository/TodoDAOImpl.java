@@ -52,6 +52,16 @@ public class TodoDAOImpl implements TodoDAO{
 		
 		return todoToUpdate;
 	}
+
+
+	@Override
+	public long deleteTodo(long todoId) {
+		
+		Todo todoToDelete = getTodo(todoId);
+		todos.remove(todoToDelete);
+		
+		return todoId;
+	}
 	
 	
 	

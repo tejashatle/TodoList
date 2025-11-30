@@ -44,5 +44,11 @@ public class TodoController {
 		return todo;
 		
 	}
+	
+	@DeleteMapping("/deleteTodo/{todoId}")
+	public long deleteTodo(@PathVariable long todoId) {
+		todoService.deleteTodo(todoId);
+		return todoId;
+	}
 
 }
