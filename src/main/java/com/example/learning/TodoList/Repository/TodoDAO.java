@@ -14,4 +14,6 @@ public interface TodoDAO {
 	
 	public Todo getTodo(long todoId);
 	
+	public Todo updateTodo(long todoId, Todo todo);
+	
 }

@@ -29,9 +29,32 @@ public class TodoDAOImpl implements TodoDAO{
 
 	@Override
 	public Todo getTodo(long todoId) {
-		
-		return todos.get((int) (todoId-1));
+		ArrayList<Todo> todoToReturn = new ArrayList<Todo>();
+		for(Todo todo : todos){
+			if(todo.getTodoId() == todoId) {
+				todoToReturn.add(todo);
+			}
+		}
+		return (Todo) todoToReturn.get(0);
+	
 	}
+
+
+	@Override
+	public Todo updateTodo(long todoId, Todo todo) {
+		
+		Todo todoToUpdate = getTodo(todoId);
+		
+		todoToUpdate.setTodoName(todo.getTodoName());
+		todoToUpdate.setTodoDescription(todo.getTodoDescription());
+		todoToUpdate.setDueDate(todo.getDueDate());
+		todoToUpdate.setCompleted(todo.isCompleted());
+		
+		return todoToUpdate;
+	}
+	
+	
+	
 	
 	
 

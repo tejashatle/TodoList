@@ -29,4 +29,9 @@ public class TodoServiceImpl implements TodoService{
 		return todoDAO.getTodo(todoId);
 	}
 
+	@Override
+	public Todo updateTodo(long todoId, Todo todo) {
+		return todoDAO.updateTodo(todoId, todo);
+	}
+
 }
