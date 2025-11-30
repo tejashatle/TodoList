@@ -11,5 +11,6 @@ public interface TodoService {
 	
 	public List<Todo> getTodoList();
 	public Todo saveTodo(Todo todo);
+	public Todo getTodo(long todoId);
 
 }

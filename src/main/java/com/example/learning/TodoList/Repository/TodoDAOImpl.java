@@ -26,4 +26,13 @@ public class TodoDAOImpl implements TodoDAO{
 		return todo;
 	}
 
+
+	@Override
+	public Todo getTodo(long todoId) {
+		
+		return todos.get((int) (todoId-1));
+	}
+	
+	
+
 }
