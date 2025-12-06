@@ -12,7 +12,6 @@ import com.example.learning.TodoList.entity.Todo;
 public class TodoDAOImpl implements TodoDAO{
 	
 	public static List<Todo> todos = new ArrayList<Todo>();
-	
 
 	@Override
 	public List<Todo> getTodoList() {
@@ -62,6 +61,19 @@ public class TodoDAOImpl implements TodoDAO{
 		
 		return todoId;
 	}
+
+
+	@Override
+	public List<Todo> getTodoByBucketId(long bucketId) {
+		ArrayList<Todo> todosToReturn = new ArrayList<Todo>();
+		for(Todo todo : todos){
+			if(todo.getBucketId() == bucketId) {
+				todosToReturn.add(todo);
+			}
+		}
+		return todosToReturn;
+	}
+
 	
 	
 	

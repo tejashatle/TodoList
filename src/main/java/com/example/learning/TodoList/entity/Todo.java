@@ -9,6 +9,8 @@ public class Todo {
 	private String todoDescription;
 	private boolean isCompleted;
 	private Date dueDate = new Date();
+	private String priority;
+	private long bucketId;
 	
 	
 	
@@ -43,7 +45,19 @@ public class Todo {
 	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
 	}
-	
+	public String getPriority() {
+		return priority;
+	}
+	public void setPriority(String priority) {
+		this.priority = priority;
+	}
+	public long getBucketId() {
+		return bucketId;
+	}
+	public void setBucketId(long bucketId) {
+		this.bucketId = bucketId;
+	}
+
 	
 	
 

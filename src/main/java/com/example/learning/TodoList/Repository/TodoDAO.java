@@ -18,4 +18,6 @@ public interface TodoDAO {
 	
 	public long deleteTodo(long todoId);
 	
+	public List<Todo> getTodoByBucketId(long bucketId);
+	
 }
